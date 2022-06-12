@@ -1,5 +1,7 @@
 name: Caching with npm
 on: push
+env:
+    PR_NUMBER: ${{ github.event.number }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,6 +33,7 @@ jobs:
         run: |
           pwd
           ls -l .github/
+          echo ${{runner.os}}-build-${{env.cache-name}}-$${{github.event.number}}
 
       - name: Install dependencies
         run: npm install aws-cdk
