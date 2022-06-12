@@ -24,9 +24,9 @@ jobs:
         name: List the state of node modules
         run: npm list
 
-      - if: ${{ steps.cache-npm.outputs.cache-hit == 'true' }}
-        name: List the stateS of node modules
-        run: npm list
+      - name: List the stateS of node modules
+        run: |
+          echo ${{ steps.cache-npm.outputs.cache-hit}}
 
       - name: tell path
         run: |
