@@ -25,7 +25,7 @@ jobs:
 
       - name: List the stateS of node modules
         run: |
-          echo ${{ steps.cache-npm.outputs.all }}
+          echo ${{ steps.cache-npm.outputs.cache-hit }}
 
       - name: tell path
         run: |
