@@ -32,7 +32,7 @@ jobs:
       - name: tell path
         run: |
           pwd
-          ls -l .github/
+          ls -l .github/../
           echo ${{runner.os}}-build-${{env.cache-name}}-$${{github.event.number}}
 
       - name: Install dependencies
