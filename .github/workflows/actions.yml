@@ -22,13 +22,15 @@ jobs:
 
       - if: ${{ steps.cache-npm.outputs.cache-hit == 'false' }}
         name: List the state of node modules
-        continue-on-error: false
         run: npm list
 
-      - if: ${{ steps.cache-npm.outputs.cache-hit == 'TRUE' }}
+      - if: ${{ steps.cache-npm.outputs.cache-hit == 'true' }}
         name: List the stateS of node modules
-        continue-on-error: false
         run: npm list
+
+      - name: tell path
+        run: |
+          echo ${{pwd}}
 
       - name: Install dependencies
         run: npm install aws-cdk
