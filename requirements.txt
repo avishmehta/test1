@@ -1,0 +1,4 @@
+cattrs==1.0.0
+aws-cdk-lib==2.17.0
+constructs>=10.0.0,<11.0.0
+aws-cdk.aws-lambda-python-alpha==2.17.0a0
