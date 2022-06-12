@@ -36,7 +36,7 @@ jobs:
           echo ${{runner.os}}-build-${{env.cache-name}}-$${{github.event.number}}
 
       - name: Install dependencies
-        run: npm install aws-cdk
+        run: pip3 install -r .github/../requirements-dev.txt
 
       - name: Build
         run: npm list
