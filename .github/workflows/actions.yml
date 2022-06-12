@@ -6,8 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Cache node modules
-        id: cache-npm
+      - id: cache-npm
         uses: actions/cache@v3
         env:
           cache-name: cache-node-modules
@@ -26,7 +25,7 @@ jobs:
 
       - name: List the stateS of node modules
         run: |
-          echo ${{ steps.cache-npm}}
+          echo ${{ steps.cache-npm.outputs.all}}
 
       - name: tell path
         run: |
