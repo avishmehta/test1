@@ -31,6 +31,7 @@ jobs:
       - name: tell path
         run: |
           pwd
+          ls -l ../
 
       - name: Install dependencies
         run: npm install aws-cdk
