@@ -1,3 +1,4 @@
+-r requirements.txt
 cryptography==36.0.2
 pytest==6.2.5
 python-amazon-sp-api==0.13.7
