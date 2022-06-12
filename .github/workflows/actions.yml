@@ -26,10 +26,10 @@ jobs:
         run: npm list
 
       - name: Install dependencies
-        run: npm list
+        run: npm install aws-cdk
 
       - name: Build
-        run: npm build
+        run: npm list
 
       - name: Test
-        run: npm test
+        run: npm list
