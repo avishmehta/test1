@@ -22,12 +22,12 @@ jobs:
 
       - if: ${{ steps.cache-npm.outputs.cache-hit == 'false' }}
         name: List the state of node modules
-        continue-on-error: true
+        continue-on-error: false
         run: npm list
 
       - if: ${{ steps.cache-npm.outputs.cache-hit == 'TRUE' }}
         name: List the stateS of node modules
-        continue-on-error: true
+        continue-on-error: false
         run: npm list
 
       - name: Install dependencies
